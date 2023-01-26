@@ -2,9 +2,8 @@ using UnityEngine;
 
 public class Shooting : MonoBehaviour
 {
-	public Transform rightFirePoint;
-	public Transform leftFirePoint;
-	public Transform centralFirePoint;
+	public Transform rightFirePoint, leftFirePoint, centralFirePoint; 
+
 	public enum FireMode
 	{
 		Single,
