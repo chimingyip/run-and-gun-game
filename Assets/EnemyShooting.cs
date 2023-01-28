@@ -14,10 +14,15 @@ public class EnemyShooting : MonoBehaviour
     }
     public FireMode currentFireMode = FireMode.DefaultRotate;
 
-    public float rotationSpeed; 
+    [SerializeField] private float degreesPerSec = 45f;
 
     void FixedUpdate()
     {
+        firePoint1.transform.RotateAround(transform.position, Vector3.forward, degreesPerSec * Time.deltaTime);
+        firePoint2.transform.RotateAround(transform.position, Vector3.forward, degreesPerSec * Time.deltaTime);
+        firePoint3.transform.RotateAround(transform.position, Vector3.forward, degreesPerSec * Time.deltaTime);
+        firePoint4.transform.RotateAround(transform.position, Vector3.forward, degreesPerSec * Time.deltaTime);
+
         cooldownTimer -= Time.deltaTime;
 
         if (cooldownTimer > 0) return;
@@ -43,5 +48,10 @@ public class EnemyShooting : MonoBehaviour
                 rb4.AddForce(firePoint4.up * bulletForce, ForceMode2D.Impulse);
                 break;
         }
+    }
+
+    public void RotateAround(Vector3 point, Vector3 axis, float angle)
+    {
+
     }
 }
