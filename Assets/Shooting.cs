@@ -12,9 +12,11 @@ public class Shooting : MonoBehaviour
 		Laser
 	}
 	public FireMode currentFireMode = FireMode.Single;
-	public GameObject bulletPrefab; 
-	
+	public GameObject bulletPrefab;
+
 	public float bulletForce = 20f;
+	public bool poweredUp = false;
+	public float powerUpTimer;
 	
 	private bool isFiring = false;
 
@@ -32,6 +34,21 @@ public class Shooting : MonoBehaviour
 		{
 			if (!fireDelayTimer.CooldownComplete) return;
 			fireDelayTimer.StartCooldown();
+
+			if (poweredUp)
+            {
+				powerUpTimer -= Time.deltaTime;
+
+				if (powerUpTimer <= 0)
+				{
+					currentFireMode = FireMode.Single;
+					powerUpTimer = 0;
+					poweredUp = false;
+				}
+			}
+
+			
+
 			switch (currentFireMode)
 			{
 				case FireMode.Single:

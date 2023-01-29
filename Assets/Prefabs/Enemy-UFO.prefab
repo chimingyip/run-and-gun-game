@@ -55,7 +55,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5632286443419714979}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.3, z: 0}
+  m_LocalPosition: {x: 0, y: 1.2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -78,7 +78,7 @@ GameObject:
   - component: {fileID: -8592259681255039830}
   m_Layer: 0
   m_Name: Enemy-UFO
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -187,7 +187,7 @@ MonoBehaviour:
   firePoint4: {fileID: 2633591697725216280}
   bulletForce: 10
   cooldown: 0.3
-  bulletPrefab: {fileID: 3042105769075104971, guid: a9826ae3bf3c8914c843bfe88f7606f2, type: 3}
+  bulletPrefab: {fileID: 3119387518900781835, guid: 3afd270b6249d0d44977b3916132a4b7, type: 3}
   currentFireMode: 0
   degreesPerSec: 45
 --- !u!114 &-8592259681255039830
